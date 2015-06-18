@@ -76,21 +76,25 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.moneyEarned)
                 </td>
-                @if (ViewBag.Permissions.EditDeleteBusiness)
+                @if (ViewBag.Permissions.EditBusiness)
                 {
                     <td>
-                        @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-                        @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ID })
+                    </td>
+                }
+                @if (ViewBag.Permissions.DetailsBusiness)
+                {
+                    <td>
+                        @Html.ActionLink("Details", "Details", new { id = item.ID })
+ 
+                    </td>
+                }
+                @if (ViewBag.Permissions.DeleteBusiness)
+                {
+                    <td>
                         @Html.ActionLink("Delete", "Delete", new { id = item.ID })
                     </td>
-                }
-                @if (!ViewBag.Permissions.EditDeleteBusiness)
-                {
-                    <td>
-                        @Html.ActionLink("Details", "Details", new { id = item.ID }) 
-                    </td>
-                }
-          
+                }         
             </tr>
         }
 

@@ -7,10 +7,12 @@
 }
 
 <h2>Coupons</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+@if (ViewBag.Permissions.CreateCoupon)
+{
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+}
 @using (Html.BeginForm()) 
 {
     <p>
@@ -116,7 +118,7 @@
                 @Html.ActionLink("Order", "Order", new { id = item.ID })
             </td>
         }
-       @if (!ViewBag.Permissions.EditDeleteCouponMaker)
+       @if (ViewBag.Permissions.OrderCouponMaker)
        {
         <td>
             @Html.ActionLink("Order", "Order", new { id = item.ID })

@@ -20,7 +20,7 @@ namespace CouponTestUnit
         public void TestMethod1()
         {
             Customer cust = new Customer();
-            Assert.AreEqual(false, cust.Permissions.EditDeleteBusiness);
+            Assert.AreEqual(false, cust.Permissions.EditBusiness);
         }
         [TestMethod]
         public void TestMethod2()
@@ -110,7 +110,7 @@ namespace CouponTestUnit
         public void TestMethod15()
         {
             Admin ad = new Admin();
-            Assert.AreEqual(true, ad.Permissions.EditDeleteBusiness);
+            Assert.AreEqual(true, ad.Permissions.DeleteBusiness);
         }
         [TestMethod]
         public void TestMethod16()

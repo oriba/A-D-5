@@ -14,7 +14,13 @@ namespace Coupons.Models
 
         bool DeleteAndApproveOrderCoupon { get; }
 
-        bool EditDeleteBusiness { get; }
+        //bool EditDeleteBusiness { get; }
+        
+        bool EditBusiness { get; }
+
+        bool DeleteBusiness { get; }
+
+        bool DetailsBusiness { get; }
 
         bool CreateBusiness { get; }
 
@@ -23,6 +29,16 @@ namespace Coupons.Models
         bool EditDeleteCoupon { get; }
 
         bool EditDeleteCouponMaker { get; }
+
+        bool OrderCouponMaker { get; }
+
+        bool IsCustomer { get; }
+
+        bool IsOwner { get; }
+
+        bool IsAdmin { get; }
+
+        bool IsGuest { get; }
 
     }
 
@@ -50,7 +66,17 @@ namespace Coupons.Models
             get { return false; }
         }
 
-        public bool EditDeleteBusiness
+        public bool EditBusiness
+        {
+            get { return false; }
+        }
+
+        public bool DeleteBusiness
+        {
+            get { return false; }
+        }
+
+        public bool DetailsBusiness
         {
             get { return false; }
         }
@@ -71,6 +97,31 @@ namespace Coupons.Models
         }
 
         public bool EditDeleteCouponMaker
+        {
+            get { return false; }
+        }
+
+        public bool OrderCouponMaker
+        {
+            get { return true; }
+        }
+
+        public bool IsCustomer
+        {
+            get { return true; }
+        }
+
+        public bool IsOwner
+        {
+            get { return false; }
+        }
+
+        public bool IsAdmin
+        {
+            get { return false; }
+        }
+
+        public bool IsGuest
         {
             get { return false; }
         }
@@ -101,7 +152,17 @@ namespace Coupons.Models
             get { return false; }
         }
 
-        public bool EditDeleteBusiness
+        public bool EditBusiness
+        {
+            get { return true; }
+        }
+
+        public bool DeleteBusiness
+        {
+            get { return false; }
+        }
+
+        public bool DetailsBusiness
         {
             get { return true; }
         }
@@ -122,6 +183,31 @@ namespace Coupons.Models
         }
 
         public bool EditDeleteCouponMaker
+        {
+            get { return false; }
+        }
+
+        public bool OrderCouponMaker
+        {
+            get { return true; }
+        }
+
+        public bool IsCustomer
+        {
+            get { return false; }
+        }
+
+        public bool IsOwner
+        {
+            get { return true; }
+        }
+
+        public bool IsAdmin
+        {
+            get { return false; }
+        }
+
+        public bool IsGuest
         {
             get { return false; }
         }
@@ -151,7 +237,17 @@ namespace Coupons.Models
             get { return true; }
         }
 
-        public bool EditDeleteBusiness
+        public bool EditBusiness
+        {
+            get { return false; }
+        }
+
+        public bool DeleteBusiness
+        {
+            get { return true; }
+        }
+
+        public bool DetailsBusiness
         {
             get { return true; }
         }
@@ -163,7 +259,7 @@ namespace Coupons.Models
 
         public bool CreateCoupon
         {
-            get { return false; }
+            get { return true; }
         }
 
         public bool EditDeleteCoupon
@@ -174,6 +270,31 @@ namespace Coupons.Models
         public bool EditDeleteCouponMaker
         {
             get { return true; }
+        }
+
+        public bool OrderCouponMaker
+        {
+            get { return true; }
+        }
+
+        public bool IsCustomer
+        {
+            get { return false; }
+        }
+
+        public bool IsOwner
+        {
+            get { return false; }
+        }
+
+        public bool IsAdmin
+        {
+            get { return true; }
+        }
+
+        public bool IsGuest
+        {
+            get { return false; }
         }
     }
 
@@ -201,7 +322,17 @@ namespace Coupons.Models
             get { return false; }
         }
 
-        public bool EditDeleteBusiness
+        public bool EditBusiness
+        {
+            get { return false; }
+        }
+
+        public bool DeleteBusiness
+        {
+            get { return false; }
+        }
+
+        public bool DetailsBusiness
         {
             get { return false; }
         }
@@ -224,6 +355,31 @@ namespace Coupons.Models
         public bool EditDeleteCouponMaker
         {
             get { return false; }
+        }
+
+        public bool OrderCouponMaker
+        {
+            get { return false; }
+        }
+
+        public bool IsCustomer
+        {
+            get { return false; }
+        }
+
+        public bool IsOwner
+        {
+            get { return false; }
+        }
+
+        public bool IsAdmin
+        {
+            get { return false; }
+        }
+
+        public bool IsGuest
+        {
+            get { return true; }
         }
     }
 
