@@ -57,3 +57,4 @@ C:\Users\lital morali\Documents\A-D-5\newCoupons\Coupons\bin\Microsoft.Owin.Secu
 C:\Users\lital morali\Documents\A-D-5\newCoupons\Coupons\obj\Debug\Coupons.csprojResolveAssemblyReference.cache
 C:\Users\lital morali\Documents\A-D-5\newCoupons\Coupons\obj\Debug\Coupons.dll
 C:\Users\lital morali\Documents\A-D-5\newCoupons\Coupons\obj\Debug\Coupons.pdb
+C:\Users\user\Documents\A-D-5\newCoupons\Coupons\obj\Debug\Coupons.csprojResolveAssemblyReference.cache
