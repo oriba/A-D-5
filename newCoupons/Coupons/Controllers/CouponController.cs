@@ -33,16 +33,24 @@ namespace Coupons.Controllers
             ViewBag.CurrentFilter = searchString;           
             var coupon = from s in db.Coupon
                            select s;
-            
+
+      /*      if (ViewBag.Permissions.isCustomer)
+            {
+                coupon = coupon.Where(s => s.Customer.Email==User.Identity.Name);
+            }
+            if (ViewBag.Permissions.isOwner)
+            {
+                coupon = coupon.Where(s => s.CouponMaker.Business.Owner.Email==User.Identity.Name);
+            }*/
             if (!String.IsNullOrEmpty(searchString))
             {
                 coupon = coupon.Where(s => s.ID.ToString().Contains(searchString));
             }
 
-            if (!String.IsNullOrEmpty(nameSearch))////////////////////////////////////
+            if (!String.IsNullOrEmpty(nameSearch))
             {
                 coupon = coupon.Where(s => s.Customer.UserName.Contains(nameSearch));
-            }///////////////////////////////////////////////////////
+            }
             switch (sortOrder)
             {
                 case "active_desc":

@@ -39,7 +39,7 @@ namespace Coupons.Controllers
             int categoryID = SelectedCategory.GetValueOrDefault();
 
             IQueryable<CouponMaker> couponMakers = db.CouponMaker
-                .Where(c => !SelectedCategory.HasValue || c.Business.categoryID == categoryID)
+                .Where(c => (c.endDate.CompareTo(DateTime.Today)>=0) && (!SelectedCategory.HasValue || c.Business.categoryID == categoryID))
                 .OrderBy(d => d.Name);
             var sql = couponMakers.ToString();
             if (!String.IsNullOrEmpty(searchString))
